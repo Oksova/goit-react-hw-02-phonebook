@@ -45,11 +45,12 @@ class ContactForm extends Component {
           Number
           <input
             className={s.formInput}
-            type="number"
+            type="text"
             name="number"
             value={this.state.number}
             onChange={this.handleNameChange}
             id={this.numberInputId}
+            placeholder="123-45-67"
           ></input>
         </label>
         <button className={s.addBtn} type="submit">

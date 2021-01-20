@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
-import Container from './Container/Container';
-import ContactList from './ContactList';
-import ContactForm from './ContactForm';
-import Filter from './Filter';
+import Container from './components/Container/Container';
+import ContactList from './components/ContactList';
+import ContactForm from './components/ContactForm';
+import Filter from './components/Filter';
 
 class App extends Component {
   state = {
@@ -19,8 +19,8 @@ class App extends Component {
   addContact = ({ name, number }) => {
     const contact = {
       id: shortid.generate(),
-      name,
-      number,
+      name: name,
+      number: number,
     };
 
     const { contacts } = this.state;
